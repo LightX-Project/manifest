@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote  name="github"
+           fetch="https://github.com/" />
+
+  <remote  name="lx"
+           fetch="https://github.com/LightX-Project"
+           revision="refs/heads/lx-12.0" />
+
+  <remote  name="los"
+           fetch="https://github.com/lineageos"/>
+
+  <remote name="pixel"
+          fetch="https://github.com/PixelExperience"
+          revision="twelve"
+          review="gerrit.pixelexperience.org" />
+
+  <!-- Main -->
+  <project path="build/make" name="build" remote="lx" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="build_soong" remote="lx" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <project path="art" name="art" remote="lx" />
+  <project path="bootable/recovery" name="bootable_recovery" remote="lx" />
+  <project path="bionic" name="bionic" remote="lx" />
+  <project path="libcore" name="libcore" remote="lx" />
+
+  <!-- External -->
+  <project path="external/json-c" name="external_json-c" remote="lx" />
+  <project path="external/jemalloc_new" name="external_jemalloc_new" remote="lx" />
+  <project path="external/colorkt" name="external_colorkt" remote="lx" />
+  <project path="external/sqlite" name="external_sqlite" remote="lx" />
+  <project path="external/tinycompress" name="external_tinycompress" remote="lx" />
+  <project path="external/tinyxml" name="external_tinyxml" remote="lx" />
+  <project path="external/themelib" name="external_themelib" remote="lx" />
+  <project path="external/zlib-ng" name="external_zlib-ng" remote="lx" />
+
+  <!-- Frameworks -->
+  <project path="frameworks/base" name="frameworks_base" remote="lx"/>
+  <project path="frameworks/av" name="frameworks_av" remote="lx" />
+  <project path="frameworks/native" name="frameworks_native" remote="lx" />
+
+  <!-- Hardware -->
+  <project path="hardware/libhardware" name="hardware_libhardware" remote="lx" />
+  <project path="hardware/interfaces" name="hardware_interfaces" remote="lx" />
+
+  <!-- Packages/Apps -->
+  <project path="packages/apps/DocumentsUI" name="LineageOS/android_packages_apps_DocumentsUI" remote="github" revision="lineage-19.0" />
+  <project path="packages/apps/DeskClock" name="LineageOS/android_packages_apps_DeskClock" remote="github" revision="lineage-19.0" />
+  <project path="packages/apps/Gallery2" name="LineageOS/android_packages_apps_Gallery2" remote="github" revision="lineage-18.1" />
+  <project path="packages/apps/Eleven" name="LineageOS/android_packages_apps_Eleven" remote="github" revision="lineage-19.0" />
+  <project path="packages/apps/Etar" name="LineageOS/android_packages_apps_Etar" remote="github" revision="lineage-19.0" />
+  <project path="packages/apps/Recorder" name="LineageOS/android_packages_apps_Recorder" remote="github" revision="lineage-19.0" />
+  <project path="packages/apps/Jelly" name="LineageOS/android_packages_apps_Jelly" remote="github" revision="lineage-19.0" />
+  <project path="packages/apps/ExactCalculator" name="LineageOS/android_packages_apps_ExactCalculator" remote="github" revision="lineage-19.0" />
+  <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" remote="lx" />
+  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="lx" />
+  <project path="packages/apps/Dialer" name="packages_apps_Dialer" remote="lx" />
+  <project path="packages/apps/Contacts" name="LineageOS/android_packages_apps_Contacts" remote="github" revision="lineage-19.0" />
+  <project path="packages/apps/Messaging" name="LineageOS/android_packages_apps_Messaging" remote="github" revision="lineage-19.0" />
+  <project path="packages/apps/Matlog" name="omnirom/android_packages_apps_Matlog" remote="github" revision="android-11"/>
+  <project path="packages/apps/Nfc" name="packages_apps_Nfc" remote="lx" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="lx" />
+  <project path="packages/apps/SimpleDeviceConfig" name="packages_apps_SimpleDeviceConfig" remote="lx" />
+  <project path="packages/apps/Snap" name="LineageOS/android_packages_apps_Snap" remote="github" revision="lineage-18.1" />
+  <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" remote="lx" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="lx" />
+
+  <!-- Prebuilts -->
+  <project path="prebuilts/build-tools" name="prebuilts_build-tools" remote="lx" />
+  <project path="prebuilts/tools-lineage" name="prebuilts_tools-lineage" remote="lx" />
+  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" remote="lx" revision="11.0" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" remote="lx" revision="11.0" />
+  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="prebuilts_gcc_linux-x86_host_x86_64-linux-glibc2.17-4.8" remote="lx" revision="11.0" />
+
+  <!-- System -->
+  <project path="system/bt" name="system_bt" remote="lx" />
+  <project path="system/core" name="system_core" remote="lx" />
+  <project path="system/security" name="system_security" remote="lx" />
+  <project path="system/sepolicy" name="system_sepolicy" remote="lx" />
+  <project path="system/memory/lmkd" name="system_memory_lmkd" remote="lx" />
+  <project path="system/update_engine" name="system_update_engine" remote="lx" />
+  <project path="system/vold" name="system_vold" remote="lx" />
+
+  <!-- Vendor -->
+  <project path="vendor/lx" name="vendor_lx" remote="lx" />
+
+  <!-- SELinux -->
+  <project path="device/lx/sepolicy" name="device_lx_sepolicy" remote="lx" />
+</manifest>
