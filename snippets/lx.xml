@@ -72,7 +72,6 @@
   <project path="packages/apps/Nfc" name="packages_apps_Nfc" remote="lx" />
   <project path="packages/apps/Settings" name="packages_apps_Settings" remote="lx" />
   <project path="packages/apps/SimpleDeviceConfig" name="packages_apps_SimpleDeviceConfig" remote="lx" />
-  <project path="packages/apps/Snap" name="LineageOS/android_packages_apps_Snap" remote="github" revision="lineage-18.1" />
   <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" remote="lx" />
   <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="lx" />
 
