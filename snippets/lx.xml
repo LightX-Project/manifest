@@ -93,6 +93,7 @@
 
   <!-- Vendor -->
   <project path="vendor/lx" name="vendor_lx" remote="lx" />
+  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="vendor_qcom_opensource_data-ipa-cfg-mgr" remote="lx" />
 
   <!-- SELinux -->
   <project path="device/lx/sepolicy" name="device_lx_sepolicy" remote="lx" />
