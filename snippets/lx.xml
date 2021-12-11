@@ -31,7 +31,7 @@
   </project>
 
   <project path="art" name="art" remote="lx" />
-  <project path="bootable/recovery" name="bootable_recovery" remote="lx" />
+  <project path="bootable/recovery" name="bootable_recovery" remote="pixel" />
   <project path="bionic" name="bionic" remote="lx" />
   <project path="libcore" name="libcore" remote="lx" />
 
