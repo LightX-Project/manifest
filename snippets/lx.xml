@@ -59,7 +59,7 @@
   <project path="packages/apps/DeskClock" name="LineageOS/android_packages_apps_DeskClock" remote="github" revision="lineage-19.0" />
   <project path="packages/apps/Gallery2" name="LineageOS/android_packages_apps_Gallery2" remote="github" revision="lineage-18.1" />
   <project path="packages/apps/Eleven" name="LineageOS/android_packages_apps_Eleven" remote="github" revision="lineage-19.0" />
-  <project path="packages/apps/Etar" name="LineageOS/android_packages_apps_Etar" remote="github" revision="lineage-19.0" />
+  <!-- <project path="packages/apps/Etar" name="LineageOS/android_packages_apps_Etar" remote="github" revision="lineage-19.0" /> -->
   <project path="packages/apps/Recorder" name="LineageOS/android_packages_apps_Recorder" remote="github" revision="lineage-19.0" />
   <project path="packages/apps/Jelly" name="LineageOS/android_packages_apps_Jelly" remote="github" revision="lineage-19.0" />
   <project path="packages/apps/ExactCalculator" name="LineageOS/android_packages_apps_ExactCalculator" remote="github" revision="lineage-19.0" />
